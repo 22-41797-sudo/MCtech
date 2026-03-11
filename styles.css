@@ -171,9 +171,24 @@ button {
 }
 
 @media (max-width: 480px) {
+  /* Keep nav links inline on small screens and shrink logo to save space */
   .nav-links {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 10px;
+    order: 2;
+    width: auto;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: clamp(40px, 10vw, 70px);
+  }
+
+  .nav-link {
+    font-size: 13px;
+    white-space: nowrap;
   }
 
   .search-btn span {
@@ -181,7 +196,7 @@ button {
   }
 
   .search-btn {
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
   }
 }
