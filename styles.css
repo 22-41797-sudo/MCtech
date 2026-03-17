@@ -925,7 +925,7 @@ button {
 
 @media (max-width: 560px) {
   .footers-row-inner { flex-direction: column; gap: 14px; padding: 12px; align-items: stretch; }
-  .footer-item { width: 100%; justify-content: center; padding: 12px 16px; gap: 14px; align-items: center; min-height: auto; }
+  .footer-item { width: 100%; justify-content: center; padding: 12px 16px; gap: 14px; align-items: center; }
   .footer-caption { align-items: center; text-align: center; }
   .footer-thumb { margin: 0; width: 72px; height: 72px; }
   .footer-item + .footer-item { border-left: none; padding-left: 0; }
