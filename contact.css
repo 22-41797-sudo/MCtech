@@ -1,0 +1,18 @@
+/* Contact page specific styles */
+.contact-hero {
+  background: linear-gradient(180deg, rgba(6,42,95,0.8), rgba(6,42,95,0.44));
+  color: #fff;
+  padding: clamp(28px, 6vw, 64px);
+  border-radius: 12px;
+  margin: 18px 0;
+  text-align: center;
+}
+.contact-inner { max-width: 980px; margin: 0 auto; padding: 12px; color: #062a5f; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 920px; margin: 18px auto; }
+.contact-form .full { grid-column: 1 / -1; }
+.form-field { display:flex; flex-direction:column; }
+.form-field label { font-weight:700; margin-bottom:6px; }
+.form-field input, .form-field textarea { padding:10px; border-radius:6px; border:1px solid rgba(6,42,95,0.08); }
+.contact-cta { text-align: center; margin-top: 12px; }
+
+@media (max-width: 880px) { .contact-form { grid-template-columns: 1fr; } }

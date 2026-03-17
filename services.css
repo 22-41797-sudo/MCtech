@@ -1,0 +1,16 @@
+/* Services page specific styles */
+.services-hero {
+  background: linear-gradient(180deg, rgba(10,58,134,0.8), rgba(10,58,134,0.5)), url('pictures/hero.jpg') center/cover no-repeat;
+  padding: clamp(28px, 6vw, 72px);
+  border-radius: 12px;
+  color: #fff;
+  margin: 18px 0;
+}
+.services-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px); margin: 0 0 8px; }
+.services-list { max-width: 1100px; margin: 18px auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.service-block { background: #fff; border-radius: 8px; padding: 18px; box-shadow: 0 12px 28px rgba(6,42,95,0.06); }
+.service-block h4 { margin: 0 0 8px; color: #083164; }
+.service-block p { color: rgba(6,42,95,0.75); font-size: 14px; }
+
+@media (max-width: 920px) { .services-list { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .services-list { grid-template-columns: 1fr; } .services-hero { padding: 20px; } }
