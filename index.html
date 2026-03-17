@@ -6,15 +6,25 @@
   <title>MC Tech</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navigation -->
   <header class="header">
-    <nav class="navbar">
+    <div class="topbar">
+      <!-- honeycomb removed -->
+      <nav class="navbar">
       <a href="#" class="logo" title="MC Tech Home" aria-label="MC Tech Home">
         <img src="pictures/mctechlogoremovebg.png" alt="MC Tech Logo" class="logo-img">
+        <div class="logo-caption">
+          <span class="brand">MC TECH</span>
+          <span class="tagline">Training and Assessment Center Inc.</span>
+        </div>
       </a>
+
+      <button class="menu-toggle" aria-label="Open navigation menu" title="Menu">☰</button>
 
       <ul class="nav-links">
         <li><a href="#" class="nav-link active">HOME</a></li>
@@ -30,15 +40,243 @@
         </svg>
         <span>SEARCH</span>
       </button>
-    </nav>
+      </nav>
+    </div>
   </header>
 
+  <!-- Navigation drawer for mobile -->
+  <div class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-action="close"></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true">
+      <button class="drawer-close" aria-label="Close menu">✕</button>
+      <nav class="drawer-nav" aria-label="Mobile Navigation">
+        <ul>
+          <li><a href="#" class="nav-link active">HOME</a></li>
+          <li><a href="#" class="nav-link">ABOUT</a></li>
+          <li><a href="#" class="nav-link">SERVICES</a></li>
+          <li><a href="#" class="nav-link">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
   <!-- Hero Section -->
-  <main class="main">
+    <!-- Hero Section moved into header -->
     <section class="hero-card">
-      <!-- Content goes here -->
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">MC Tech Training and<br>Assessment Center Inc.</h1>
+          <h2 class="hero-splash">BE TESDA SCHOLAR!</h2>
+          <div class="hero-divider" aria-hidden="true"></div>
+          <p class="hero-sub">Empowering Skills, Building Future Careers</p>
+
+          <div class="hero-ctas">
+            <a href="#" class="btn btn-ghost">Visit TESDA Website</a>
+            <a href="#" class="btn btn-secondary">Link for BSRs</a>
+          </div>
+
+          <a href="#" class="btn btn-enroll">ENROLL NOW</a>
+        </div>
+      </div>
+      <!-- decorative footer overlay placed on bottom of hero -->
+        <!-- Removed decorative footer overlay image -->
     </section>
+  </header>
+
+  <main class="main">
+    <!-- main content left intentionally empty while hero sits in header -->
+    <!-- Row of footer images below the hero -->
+    <section class="footers-row" aria-label="Footer images">
+      <div class="footers-row-inner">
+        <div class="footer-item">
+          <img src="pictures/footer1.png" alt="Technical training" class="footer-thumb">
+          <div class="footer-caption">
+            <h3 class="footer-title">Technical training</h3>
+            <p class="footer-sub">Hands-on Courses</p>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <img src="pictures/footer2.png" alt="Skills Assessment" class="footer-thumb">
+          <div class="footer-caption">
+            <h3 class="footer-title">Skills Assessment</h3>
+            <p class="footer-sub">Competency assessments</p>
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <img src="pictures/footer3.png" alt="Certificate" class="footer-thumb">
+          <div class="footer-caption">
+            <h3 class="footer-title">Certificate</h3>
+            <p class="footer-sub">TESDA Accredited</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Services section (moved below footer images) -->
+    <section class="services-section" aria-label="Our Services">
+      <div class="services-inner">
+        <h2 class="services-title">Our Services</h2>
+        <p class="services-desc">We provide practical skills and reliable technical support to help students succeed in the digital world.</p>
+      </div>
+    </section>
+
+    <!-- Service detail cards -->
+    <section class="service-cards" aria-label="Service details">
+      <div class="service-cards-inner">
+        <article class="service-card">
+          <div class="service-image">
+            <img src="pictures/service1.jpg" alt="CSS NC II Training">
+          </div>
+          <h3 class="service-card-title">CSS NC II Training</h3>
+          <p class="service-card-desc">We provide practical skills and reliable technical support to help students and business</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-image">
+            <img src="pictures/service2.jpg" alt="Assessment">
+          </div>
+          <h3 class="service-card-title">Assessment</h3>
+          <p class="service-card-desc">The educational support to help students and business succeed in the digital world.</p>
+        </article>
+      </div>
+    </section>
+    
+    <!-- Location / Geomapping -->
+    <section class="location-section" aria-label="Location">
+      <div class="location-inner">
+        <h2 class="location-title">Location</h2>
+
+        <div class="location-card">
+          <button class="map-toggle" aria-label="Enlarge map" title="Enlarge map">⤢</button>
+          <div class="location-map">
+            <iframe src="https://www.google.com/maps?q=13.769822719436396,121.05272902363143&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="MC Tech location map"></iframe>
+          </div>
+
+          <div class="location-address">
+            <svg class="pin-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white" opacity="0.98"/>
+              <circle cx="12" cy="9" r="2.5" fill="#0A3A86"/>
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=MCTECH+Training+and+Assessment+Center+Inc+Batangas" target="_blank" rel="noopener">Bolbok Rd, Batangas City, Batangas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      (function(){
+        const card = document.querySelector('.location-card');
+        const toggle = document.querySelector('.map-toggle');
+        if (!card || !toggle) return;
+
+        function openMap(){
+          card.classList.add('expanded');
+          document.body.style.overflow = 'hidden';
+          toggle.setAttribute('aria-label','Close map');
+          toggle.textContent = '✕';
+        }
+
+        function closeMap(){
+          card.classList.remove('expanded');
+          document.body.style.overflow = '';
+          toggle.setAttribute('aria-label','Enlarge map');
+          toggle.textContent = '⤢';
+        }
+
+        toggle.addEventListener('click', function(e){
+          if (card.classList.contains('expanded')) closeMap(); else openMap();
+        });
+
+        // close on ESC
+        document.addEventListener('keydown', function(e){
+          if (e.key === 'Escape' && card.classList.contains('expanded')) closeMap();
+        });
+
+        // close when clicking outside the card while expanded
+        document.addEventListener('click', function(e){
+          if (!card.classList.contains('expanded')) return;
+          if (!card.contains(e.target) && !toggle.contains(e.target)) closeMap();
+        });
+      })();
+    </script>
+    
+    <script>
+      (function(){
+        const menuToggle = document.querySelector('.menu-toggle');
+        const drawer = document.querySelector('.nav-drawer');
+        const backdrop = drawer && drawer.querySelector('.drawer-backdrop');
+        const closeBtn = drawer && drawer.querySelector('.drawer-close');
+        if (!menuToggle || !drawer) return;
+
+        function openDrawer(){
+          drawer.classList.add('open');
+          drawer.setAttribute('aria-hidden','false');
+          document.body.style.overflow = 'hidden';
+          menuToggle.setAttribute('aria-expanded','true');
+        }
+        function closeDrawer(){
+          drawer.classList.remove('open');
+          drawer.setAttribute('aria-hidden','true');
+          document.body.style.overflow = '';
+          menuToggle.setAttribute('aria-expanded','false');
+        }
+
+        menuToggle.addEventListener('click', function(e){
+          if (drawer.classList.contains('open')) closeDrawer(); else openDrawer();
+        });
+        closeBtn && closeBtn.addEventListener('click', closeDrawer);
+        backdrop && backdrop.addEventListener('click', closeDrawer);
+        document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+      })();
+    </script>
   </main>
+</main>
+
+  <!-- Site footer decorative image -->
+  <footer class="site-footer" aria-label="Why choose MC Tech">
+    <img src="pictures/whychoosemctech.png" alt="Why choose MC Tech" class="site-footer-img">
+  </footer>
+
+  <!-- Bottom copyright/footer bar -->
+  <div class="bottom-bar" role="contentinfo" aria-label="Site footer">
+    <!-- SVG circuit overlay (decorative) -->
+    <svg class="footer-circuit" xmlns="http://www.w3.org/2000/svg" viewBox="-200 0 1600 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <g stroke="#9fcaff" stroke-width="2.5" fill="none" filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round" opacity="0.36">
+        <path d="M-160 62h220v-22h100" />
+        <path d="M120 62h180v-26h140" />
+        <path d="M420 62h240v-20h220" />
+        <path d="M920 62h280" />
+        <path d="M40 42v14" />
+        <path d="M380 42v22" />
+        <path d="M740 46v14" />
+        <path d="M1260 42h220" />
+      </g>
+      <g fill="#dbeeff" opacity="0.95">
+        <circle cx="-160" cy="62" r="3.8" />
+        <circle cx="120" cy="62" r="3.8" />
+        <circle cx="380" cy="42" r="3.8" />
+        <circle cx="560" cy="62" r="3.8" />
+        <circle cx="740" cy="46" r="3.8" />
+        <circle cx="920" cy="62" r="3.8" />
+        <circle cx="1260" cy="42" r="3.8" />
+      </g>
+    </svg>
+
+    <div class="bottom-inner">
+      <p>© 2024 MC Tech Training and Assessment Center Inc. All Rights Reserved.</p>
+    </div>
+  </div>
 
 </body>
 </html>
