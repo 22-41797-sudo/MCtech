@@ -14,3 +14,9 @@
 
 @media (max-width: 920px) { .services-list { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 560px) { .services-list { grid-template-columns: 1fr; } .services-hero { padding: 20px; } }
+
+/* Make page wrapper fill viewport and place footer at bottom */
+html, body { height: 100%; }
+.page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+.page-wrapper .main { flex: 1 0 auto; }
+.bottom-bar { margin-top: auto; }

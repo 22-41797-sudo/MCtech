@@ -16,3 +16,9 @@
 .contact-cta { text-align: center; margin-top: 12px; }
 
 @media (max-width: 880px) { .contact-form { grid-template-columns: 1fr; } }
+
+/* Make page wrapper fill viewport and place footer at bottom */
+html, body { height: 100%; }
+.page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+.page-wrapper .main { flex: 1 0 auto; }
+.bottom-bar { margin-top: auto; }

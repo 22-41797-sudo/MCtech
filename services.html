@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — MC Tech</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="services.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="page-wrapper">
 
   <header class="header">
     <div class="topbar">
@@ -26,7 +27,7 @@
       <button class="menu-toggle" aria-label="Open navigation menu" title="Menu">☰</button>
 
       <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="index.html" class="nav-link">HOME</a></li>
         <li><a href="about.html" class="nav-link">ABOUT</a></li>
         <li><a href="services.html" class="nav-link active">SERVICES</a></li>
         <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
@@ -42,6 +43,22 @@
       </nav>
     </div>
   </header>
+
+  <!-- Navigation drawer for mobile -->
+  <div class="nav-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-action="close"></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true">
+      <button class="drawer-close" aria-label="Close menu">✕</button>
+      <nav class="drawer-nav" aria-label="Mobile Navigation">
+        <ul>
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="services.html" class="nav-link active">SERVICES</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <main class="main">
     <section class="services-section">
@@ -90,6 +107,37 @@
       <p>© 2024 MC Tech Training and Assessment Center Inc. All Rights Reserved.</p>
     </div>
   </div>
+
+<!-- Menu script to power mobile drawer -->
+<script>
+  (function(){
+    const menuToggle = document.querySelector('.menu-toggle');
+    const drawer = document.querySelector('.nav-drawer');
+    const backdrop = drawer && drawer.querySelector('.drawer-backdrop');
+    const closeBtn = drawer && drawer.querySelector('.drawer-close');
+    if (!menuToggle || !drawer) return;
+
+    function openDrawer(){
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden','false');
+      document.body.style.overflow = 'hidden';
+      menuToggle.setAttribute('aria-expanded','true');
+    }
+    function closeDrawer(){
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+      menuToggle.setAttribute('aria-expanded','false');
+    }
+
+    menuToggle.addEventListener('click', function(e){
+      if (drawer.classList.contains('open')) closeDrawer(); else openDrawer();
+    });
+    closeBtn && closeBtn.addEventListener('click', closeDrawer);
+    backdrop && backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+  })();
+</script>
 
 </body>
 </html>

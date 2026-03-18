@@ -242,6 +242,13 @@ button {
 .drawer-nav a { display: block; padding: 10px 12px; border-radius: 8px; color: #062a5f; font-weight: 700; }
 .drawer-nav a:hover { background: rgba(13,71,161,0.06); color: #0a3a86; }
 
+/* Ensure active drawer link is visually prominent on mobile */
+.drawer-nav .nav-link.active {
+  background: linear-gradient(180deg,#0D47A1,#0A3A86);
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(10,58,134,0.12);
+}
+
 .nav-drawer.open { display: block; }
 .nav-drawer.open .drawer-backdrop { opacity: 1; }
 .nav-drawer.open .drawer-panel { transform: translateX(0%); }
