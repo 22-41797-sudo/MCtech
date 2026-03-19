@@ -64,7 +64,7 @@
 .about-top-image {
   margin: 14px 0;
   border-radius: 8px;
-  overflow: visible; /* allow overlays to sit on top */
+  overflow: hidden; /* keep overlay text inside the image bounds */
   /* match hero full-bleed width and spacing */
   width: calc(100vw - 32px);
   max-width: 100vw;

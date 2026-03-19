@@ -14,6 +14,10 @@ body {
   min-height: 100vh;
 }
 
+/* Prevent horizontal overflow on small screens so users can't pan/zoom to reveal
+   layout gaps. This avoids header/footer edges appearing off-screen. */
+html, body { overflow-x: hidden; }
+
 :root {
   --blue-ash: rgba(13,71,161,0.28);
   --blue-ash-soft: rgba(13,71,161,0.12);
