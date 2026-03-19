@@ -142,9 +142,18 @@
 }
 
 @media (max-width: 880px) {
-  .about-banner-content { left: 18px; top: 20px; max-width: 56%; padding: 14px; }
+  /* Stack banner content below image on narrower screens to avoid overflow */
+  .about-banner-content {
+    position: static;
+    background: rgba(2,18,40,0.55);
+    width: calc(100% - 32px);
+    margin: 12px 16px 0;
+    max-width: none;
+    padding: 12px 14px;
+    transform: none;
+  }
   .about-banner-title { font-size: 20px; }
-  .about-banner-desc { font-size: 13px; }
+  .about-banner-desc { font-size: 14px; }
 }
 
 @media (max-width: 640px) {
